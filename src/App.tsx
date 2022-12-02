@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from "./components/header/Header"
+import {Route, Routes} from "react-router";
+import Login from "./components/pages/loginpages/Login";
+import TodoPage from "./components/pages/TodoPage/TodoPage";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Header/>
+            <Routes>
+                <Route
+                    path={"/"}
+                    element={<Login/>}/>
+                <Route
+                    path={"/login"}
+                    element={<Login/>}/>
+                <Route
+                    path={"/main-page"}
+                    element={<TodoPage/>}/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
