@@ -1,20 +1,5 @@
 {
-  "ToDoList": [
-    {
-      "header": "ssdvbsavnn",
-      "description": "askbkabhjebjhrbahebrjhaebr",
-      "deadline": "2022-12-09T19:58",
-      "id": 1670000327636,
-      "completed": false
-    },
-    {
-      "header": "sldkngjksdnfjbndj",
-      "description": "dsflkbndfnsbkndslfkbl",
-      "deadline": "",
-      "id": 1670000407855,
-      "completed": true
-    }
-  ],
+  "ToDoList": [],
   "auth": {
     "login": "TestLogin",
     "password": "TestPassword"

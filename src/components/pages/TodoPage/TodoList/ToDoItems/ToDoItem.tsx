@@ -15,24 +15,26 @@ const ToDoItem = (props: ToDoItemPropsType) => {
     let interval = () => setTimeout(() => {
         setDeadLineItemState(TotalHour(props.deadLineItem, setOnDeadLine))
     }, 500)
-    setTimeout(()=>interval(),500)
+    setTimeout(() => interval(), 500)
     return (
         <div className="toDoItem">
             <div className="headerAndDeadLine">
                 <div><h3>{props.headerItem}</h3></div>
-                {}
                 {props.completedItem
-                    ?<div><span style={{color:'green'}}>done</span></div>
-                    :<div>{onDeadLine ? <span style={{color:'red'}}>time is over</span> : <span>{deadLineItemState.match(/NaN/)?"no time limit":deadLineItemState}</span>}</div>
+                    ? <div><span style={{color: 'green'}}>done</span></div>
+                    : <div>{onDeadLine ? <span style={{color: 'red'}}>time is over</span> :
+                        <span>{deadLineItemState.match(/NaN/) ? "no time limit" : deadLineItemState}</span>}</div>
                 }
             </div>
             <div className="description"><p>{props.descriptionItem}</p></div>
-            <button className="btnDelete" onClick={()=> {
+            <button className="btnDelete" onClick={() => {
                 ToDo.deleteToDo(props.idItem)
-            }}>delete</button>
-            <button className="btnCompleted" onClick={()=> {
+            }}>delete
+            </button>
+            <button className="btnCompleted" onClick={() => {
                 ToDo.completeToDo(props.idItem)
-            }} >complete</button>
+            }}>complete
+            </button>
         </div>
     );
 };
